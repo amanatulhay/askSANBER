@@ -1,6 +1,5 @@
 {
     "version": 2,
-      "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
@@ -24,10 +23,9 @@
     ],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "https://ask-sanber.vercel.app",
-        "APP_KEY": "base64:iwftDxDvbCbCuq+f3STJXRHsBtaiFOCxcurMDT6+ddE=",
-
+        "APP_DEBUG": "false",
+        "APP_NAME": "AskSANBER",
+        
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -37,6 +35,8 @@
 
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "SESSION_DRIVER": "cookie",
+
+        "NODE_PATH": "node"
     }
 }
