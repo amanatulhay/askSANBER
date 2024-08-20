@@ -25,7 +25,8 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://yourprojectdomain.com",
+        "APP_URL": "https://ask-sanber.vercel.app",
+        "APP_KEY": "base64:iwftDxDvbCbCuq+f3STJXRHsBtaiFOCxcurMDT6+ddE=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
