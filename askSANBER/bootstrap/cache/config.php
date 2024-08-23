@@ -5,7 +5,7 @@
     'env' => 'local',
     'debug' => true,
     'url' => 'http://localhost',
-    'asset_url' => 'https://ask-sanber.vercel.app/',
+    'asset_url' => 'public',
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
