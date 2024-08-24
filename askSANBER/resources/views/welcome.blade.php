@@ -14,7 +14,7 @@ DASHBOARD
  <link href="{{ asset('template2/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
  <!-- Google Fonts -->
- <link href="{{ asset('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700') }}" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
  <!-- Bootstrap CSS File -->
  <link href="{{ asset('template2/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -64,7 +64,7 @@ DASHBOARD
             <div class="col-md-4 wow fadeInUp">
               <div class="about-col">
                 <div class="img">
-                  <img src="template2/img/about-plan.jpg" alt="" class="img-fluid">
+                  <img src="{{ asset('template2/img/about-plan.jpg') }}" alt="" class="img-fluid">
                   <div class="icon"><i class="ion-ios-list-outline"></i></div>
                 </div>
                 <h2 class="title"><a href="/">Most Recent Question</a></h2>
@@ -88,7 +88,7 @@ DASHBOARD
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
               <div class="about-col">
                 <div class="img">
-                  <img src="template2/img/about-plan.jpg" alt="" class="img-fluid">
+                  <img src="{{ asset('template2/img/about-plan.jpg') }}" alt="" class="img-fluid">
                   <div class="icon"><i class="ion-ios-list-outline"></i></div>
                 </div>
                 <h2 class="title"><a href="/">Most Recent Answer</a></h2>
@@ -111,7 +111,7 @@ DASHBOARD
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
               <div class="about-col">
                 <div class="img">
-                  <img src="template2/img/about-vision.jpg" alt="" class="img-fluid">
+                  <img src="{{ asset('template2/img/about-vision.jpg') }}" alt="" class="img-fluid">
                   <div class="icon"><i class="ion-ios-eye-outline"></i></div>
                 </div>
                 <h2 class="title"><a href="/">Add Your Question!</a></h2>

@@ -12,7 +12,7 @@
   <link href="{{ asset('template2/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="{{ asset('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
   <link href="{{ asset('template2/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -85,7 +85,7 @@
 
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active" style="background-image: url('template2/img/intro-carousel/1.jpg');">
+          <div class="carousel-item active" style="background-image: asset('template2/img/intro-carousel/1.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Ask anything</h2>
@@ -95,7 +95,7 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('template2/img/intro-carousel/2.jpg');">
+          <div class="carousel-item" style="background-image: asset('template2/img/intro-carousel/2.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Join to Discussion</h2>
@@ -105,7 +105,7 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('template2/img/intro-carousel/3.jpg');">
+          <div class="carousel-item" style="background-image: asset('template2/img/intro-carousel/3.jpg');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Wide number of Categories</h2>
