@@ -182,7 +182,7 @@
                     @if (isset($jawaban->id))
                        <span class="badge badge-info">Category: {{$jawaban->pertanyaan->kategori->name}}</span>
                        <p class="card-text">{!!Str::limit($jawaban["content"], 400)!!}</p>
-                       <img src="{{asset('image/'.$jawaban->image)}}" class="card-img-top" alt="">
+                       <img src="{{$jawaban->image}}" class="card-img-top" alt="">
                        <p>Posted by: {{$jawaban->user->name}}</p>
                        <a href="/pertanyaan/{{$jawaban->pertanyaan->id}}" class="btn btn-primary btn-block btn-sm">Go to the Discussion</a>
                     @else
