@@ -16,7 +16,7 @@
         <p>Category: <span class="badge badge-info"> {{$pertanyaan->kategori->name}}</span></p>
         
         <p class="card-text">{!!$pertanyaan->content!!}</p>
-        <img src="{{asset('image/'.$pertanyaan->image)}}" class="card-img-top" alt="">
+        <img style="width: 300px" src="{{$pertanyaan->image}}" class="card-img-top pb-4" alt="">
         <p>Asked by: {{$pertanyaan->user->name}}</p>
     </div>
 

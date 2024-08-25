@@ -24,7 +24,7 @@
         @enderror
         <div class="form-group">
             <label>Image</label>
-            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror">
+            <input type="text" name="image" class="form-control @error('image') is-invalid @enderror">
         </div>
         @error('image')
             <div class="alert alert-danger">{{ $message }}</div>

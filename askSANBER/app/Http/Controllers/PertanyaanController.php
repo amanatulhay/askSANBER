@@ -55,7 +55,6 @@ class PertanyaanController extends Controller
          $request->validate([
              'title' => 'required',
              'content' => 'required',
-             'image' => 'image|mimes:jpg,png,jpeg',
              'kategori_id' => 'required'
          ]);
  
@@ -63,10 +62,7 @@ class PertanyaanController extends Controller
          $userId = Auth::id();
 
          if($request->has('image')){
-            $fileName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('image'), $fileName);
-            
-            $pertanyaan->image = $fileName;
+            $pertanyaan->image = $request->image;
          } else {
             $pertanyaan->image = '';
          }         
@@ -124,21 +120,13 @@ class PertanyaanController extends Controller
          $request->validate([             
              'title' => 'required',
              'content' => 'required',
-             'image' => 'image|mimes:jpg,png,jpeg',
              'kategori_id' => 'required'
          ]);
  
          $pertanyaan = Pertanyaan::find($id);
  
          if($request->has('image')){
-             $path = 'image/';
-             File::delete($path. $pertanyaan->image);
-             
-             $fileName = time().'.'.$request->image->extension();
-             $request->image->move(public_path('image'), $fileName);
- 
-             $pertanyaan->image = $fileName;
-             $pertanyaan->save();
+             $pertanyaan->image = $request->image;
          }
 
          $userId = Auth::id();
@@ -165,8 +153,6 @@ class PertanyaanController extends Controller
      public function destroy($id)
      {
          $pertanyaan = Pertanyaan::find($id);
-         $path = 'image/';
-         File::delete($path. $pertanyaan->image);
              
          $pertanyaan->delete();
 
