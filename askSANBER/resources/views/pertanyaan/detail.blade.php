@@ -31,7 +31,7 @@
         </div>
         <div class="card-body">
            <p class="card-text">{!!$item->content!!}</p>
-           <img src="{{asset('image/'.$item->image)}}" class="card-img-top" alt="">
+           <img src="{{$item->image}}" class="card-img-top" alt="">
         </div>
         @auth
         @if (Auth::user()->id == $item->user_id)
@@ -67,8 +67,8 @@
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <div class="form-group">
-            <label>Image</label>
-            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror">
+            <label>Image URL</label>
+            <input type="text" name="image" class="form-control @error('image') is-invalid @enderror">
         </div>
         @error('image')
             <div class="alert alert-danger">{{ $message }}</div>
