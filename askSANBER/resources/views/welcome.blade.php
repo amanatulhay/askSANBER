@@ -74,7 +74,7 @@ DASHBOARD
                       <h5 class="text-primary">{{$pertanyaan->title}}</h5>
                       <span class="badge badge-info">Category: {{$pertanyaan->kategori->name}}</span>
                        <p class="card-text">{!!Str::limit($pertanyaan->content, 100)!!}</p>
-                       <img src="{{asset('image/'.$pertanyaan->image)}}" class="card-img-top" alt="">
+                       <img src="{{$pertanyaan->image}}" class="card-img-top" alt="">
                        <p>Asked by: {{$pertanyaan->user->name}}</p>
                       <a href="/pertanyaan/{{$pertanyaan->id}}" class="btn btn-primary btn-block btn-sm">Check Out The Question</a>
                     @else
