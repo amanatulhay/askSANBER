@@ -62,12 +62,13 @@
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
             @csrf
-            </form>  
+            </form>
+            <li><a href="/profile">{{ Auth::user()->name }}</a></li>
           @endauth
           @guest
             <li><a href="/login">Log In</a></li>
+            <li><a href="/register">Register</a></li>
           @endguest
-          <li><a href="/register">Register</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
