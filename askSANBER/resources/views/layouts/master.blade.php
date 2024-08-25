@@ -25,10 +25,18 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary bg-navy elevation-4">
     <!-- Brand Logo -->
-    <a href="/profile" class="brand-link">
-      <img src="{{asset("/template/dist/img/icons2.png")}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">askSANBER!</span>
-    </a>
+    @auth
+      <a href="/profile" class="brand-link">
+        <img src="{{asset("/template/dist/img/icons2.png")}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">askSANBER!</span>
+      </a>
+    @endauth
+    @guest
+      <a href="/login" class="brand-link">
+        <img src="{{asset("/template/dist/img/icons2.png")}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">askSANBER!</span>
+      </a>
+    @endguest
 
     <!-- Sidebar -->
     @include('partial.sidebar')
