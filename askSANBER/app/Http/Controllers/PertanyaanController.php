@@ -61,11 +61,7 @@ class PertanyaanController extends Controller
          $pertanyaan = new Pertanyaan;
          $userId = Auth::id();
 
-         if($request->has('image')){
-            $pertanyaan->image = $request->image;
-         } else {
-            $pertanyaan->image = '';
-         }         
+         $pertanyaan->image = request('image', '');         
   
          $pertanyaan->title = $request->title;
          $pertanyaan->content = $request->content;
@@ -125,9 +121,7 @@ class PertanyaanController extends Controller
  
          $pertanyaan = Pertanyaan::find($id);
  
-         if($request->has('image')){
-             $pertanyaan->image = $request->image;
-         }
+         $pertanyaan->image = request('image', '');   
 
          $userId = Auth::id();
 

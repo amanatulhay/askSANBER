@@ -16,8 +16,8 @@
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <div class="form-group">
-            <label>Image</label>
-            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror">
+            <label>Image URL</label>
+            <input type="text" name="image" class="form-control @error('image') is-invalid @enderror" value="{{$jawaban->image}}">
         </div>
         @error('image')
             <div class="alert alert-danger">{{ $message }}</div>

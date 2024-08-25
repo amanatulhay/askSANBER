@@ -17,20 +17,12 @@ class JawabanController extends Controller
     public function store($pertanyaan_id, Request $request){
         $request->validate([
             'content' => 'required',
-            'image' => 'mimes:jpg,png,jpeg',
         ]);
         
         $userId = Auth::id();
         $jawaban = new Jawaban;
 
-        if($request->has('image')){
-            $fileName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('image'), $fileName);
-            
-            $jawaban->image = $fileName;
-         } else {
-            $jawaban->image = '';
-         }         
+        $jawaban->image = request('image', '');
 
         $jawaban->content= $request->content;
         $jawaban->user_id= $userId;
@@ -55,23 +47,12 @@ class JawabanController extends Controller
      {
          $request->validate([             
              'content' => 'required',
-             'image' => 'image|mimes:jpg,png,jpeg',
          ]);
  
-         $jawaban = Jawaban::find($id);
-        
+         $jawaban = Jawaban::find($id);      
          $pertanyaan_id = $jawaban->pertanyaan_id;
- 
-         if($request->has('image')){
-             $path = 'image/';
-             File::delete($path. $jawaban->image);
-             
-             $fileName = time().'.'.$request->image->extension();
-             $request->image->move(public_path('image'), $fileName);
- 
-             $jawaban->image = $fileName;
-             $jawaban->save();
-         }
+         
+         $jawaban->image = request('image', '');
 
          $userId = Auth::id();
          
@@ -90,8 +71,6 @@ class JawabanController extends Controller
      {
          $jawaban = Jawaban::find($id);         
          $pertanyaan_id = $jawaban->pertanyaan_id;
-         $path = 'image/';
-         File::delete($path. $jawaban->image);
          $jawaban->delete();
 
          
