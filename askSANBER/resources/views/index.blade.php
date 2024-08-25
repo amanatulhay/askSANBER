@@ -85,7 +85,7 @@
 
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active" style="background-image: asset('template2/img/intro-carousel/1.jpg');">
+          <div class="carousel-item active" style="background-image: ({{ URL::asset('template2/img/intro-carousel/1.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Ask anything</h2>
@@ -95,7 +95,7 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: asset('template2/img/intro-carousel/2.jpg');">
+          <div class="carousel-item" style="background-image: url({{ URL::asset('template2/img/intro-carousel/2.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Join to Discussion</h2>
@@ -105,7 +105,7 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: asset('template2/img/intro-carousel/3.jpg');">
+          <div class="carousel-item" style="background-image: ({{ URL::asset('template2/img/intro-carousel/3.jpg') }});">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Wide number of Categories</h2>
