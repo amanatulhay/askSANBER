@@ -9,6 +9,7 @@
         { "src": "/favicon/(.*)", "dest": "/public/favicon/" },
         { "src": "/template/(.*)", "dest": "/public/template/" },
         { "src": "/template2/(.*)", "dest": "/public/template2/" },
+        { "src": "/vendor/(.*)", "dest": "/public/vendor/" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "env": {
