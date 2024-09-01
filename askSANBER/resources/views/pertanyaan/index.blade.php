@@ -20,7 +20,7 @@
                     <h5 class="text-primary">{{$item->title}}</h5>
                     <span class="badge badge-info"> {{$item->kategori->name}}</span>
                      <p class="card-text">{!!Str::limit($item->content, 100)!!}</p>
-                     <img src="{{$item->image}}" class="card-img-top mb-4" alt="">
+                     <img src="{{$item->image}}" height="250px" class="card-img-top mb-4" alt="">
                      <p>Asked by: {{$item->user->name}}</p>
                     <a href="/pertanyaan/{{$item->id}}" class="btn btn-secondary btn-block btn-sm">Read More / Drop Your Answer</a>
                     @auth
